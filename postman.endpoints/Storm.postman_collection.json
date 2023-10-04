@@ -1,0 +1,187 @@
+{
+  "info": {
+    "_postman_id": "1a0e3535-ea86-438a-9e12-caa220693e61",
+    "name": "Storm",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "28955435"
+  },
+  "item": [
+    {
+      "name": "users",
+      "item": [
+        {
+          "name": "register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\n{\n  \"userName\":\"jesus\",\n  \"email\":\"jesus@gmail.com\" ,\n  \"passwd\": \"jesus\"\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:4300/users/register",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4300",
+              "path": ["users", "register"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjBjYTY1MzVjZTNiYmFmY2MxNjFjMyIsInVzZXJOYW1lIjoiQ2VsaW9mYW4iLCJpYXQiOjE2OTM1MDM3MzF9.NZTr0ojOZt6F1ZFOeIkmC25wbjQ4ddli85edWS0AcAg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\n{\n  \"userName\":\"jesus\",\n  \"email\":\"jesus@gmail.com\" ,\n  \"passwd\": \"jesus\"\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:4300/users/login",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4300",
+              "path": ["users", "login"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "storms",
+      "item": [
+        {
+          "name": "create",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDQwYTM3YTRlZjEzZjUxNzU5ZTk2NSIsInVzZXJOYW1lIjoic2VyZ2lvbWF0YSIsImlhdCI6MTY5NTA0OTQ0M30.81SEQpoDtjBY-u9zj5DVC7buZ3ZWM3VomuL3THhsJOM",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "Storm in Port5",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/Users/Cel/Desktop/Proyecto final/storms pictures/violent-stormy-night-in-the-mountains-with-flashe-2023-08-25-05-45-24-utc.jpg"
+                },
+                {
+                  "key": "ubication",
+                  "value": "Asia5",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "Esta tormenta tuvo lugar un 15 de agosto, mientras los vecinos celebraban sus fiestas, el cielo se iluminó5",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:4300/storms/create",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4300",
+              "path": ["storms", "create"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDQwYTM3YTRlZjEzZjUxNzU5ZTk2NSIsInVzZXJOYW1lIjoic2VyZ2lvbWF0YSIsImlhdCI6MTY5NTA0OTQ0M30.81SEQpoDtjBY-u9zj5DVC7buZ3ZWM3VomuL3THhsJOM",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:4300/storms/650867164d97c5106d66c1c2",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4300",
+              "path": ["storms", "650867164d97c5106d66c1c2"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDQwYTM3YTRlZjEzZjUxNzU5ZTk2NSIsInVzZXJOYW1lIjoic2VyZ2lvbWF0YSIsImlhdCI6MTY5NTA0OTQ0M30.81SEQpoDtjBY-u9zj5DVC7buZ3ZWM3VomuL3THhsJOM",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Storm in Port4edit\",\n    \"image\": {\n        \"id\": \"violent-stormy-night-in-the-mountains-with-flashe-2023-08-25-05-45-24-utc\",\n        \"width\": 4620,\n        \"height\": 4000,\n        \"format\": \"jpg\",\n        \"url\": \"http://res.cloudinary.com/duiymesbw/image/upload/v1695039825/violent-stormy-night-in-the-mountains-with-flashe-2023-08-25-05-45-24-utc.jpg\",\n        \"_id\": \"650875a6081cc384ba61afef\"\n    },\n    \"ubication\": \"Asia4edit\",\n    \"description\": \"Stormedit\",\n    \"id\": \"650875a6081cc384ba61afee\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:4300/storms/650875a6081cc384ba61afee",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4300",
+              "path": ["storms", "650875a6081cc384ba61afee"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
